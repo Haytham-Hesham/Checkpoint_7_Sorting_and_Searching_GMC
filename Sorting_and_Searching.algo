@@ -1,0 +1,14 @@
+PROCEDURE Insertion_Sort(myarray: ARRAY_OF INTEGER)
+VAR
+    i,j,k : INTEGER;
+BEGIN
+    FOR i FROM 1 TO myarray.length STEP 1  DO
+        j=i;
+        k= myarray[i];
+        WHILE (j>0 AND myarray[j-1]>k) DO
+            myarray[j]=myarray[j-1];
+            j=j-1;
+        END_WHILE
+        myarray[j]=k;
+    END_FOR
+END
